@@ -1,0 +1,35 @@
+#!/bin/sh
+
+[ -f "$XINITRC" ] && alias startx="startx $XINITRC"
+
+# Aliases for common commands
+alias \
+	v="$EDITOR" \
+	vim="$EDITOR" \
+	p="sudo pacman" \
+	z="zathura" \
+	sdn="shutdown -h now" \
+	g="git" \
+	ka="killall" \
+	ll="ls -lhNa --color=auto --group-directories-first" \
+	ls="ls -lhN --color=auto --group-directories-first" \
+	mount="sudo mount" \
+	umount="sudo umount" \
+	pls="sudo" \
+	pup="sudo pacman -Syu --ignore qbittorrent"
+
+# Add options to commands that are always used
+alias \
+        dosbox="dosbox -conf "$XDG_CONFIG_HOME"/dosbox/dosbox.conf"\
+	scli="scli -c $XDG_CONFIG_HOME/scli/sclirc"
+
+# Make sure you don't mess up anything with your cp, mv or rm commands and make
+# things look nicer
+alias \
+	cp="cp -iv" \
+	mv="mv -iv" \
+	rm="rm -vI" \
+	bc="bc -ql" \
+	mkdir="mkdir -pv" \
+	grep="grep --color=auto" \
+	diff="diff --color=auto"

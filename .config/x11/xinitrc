@@ -1,0 +1,9 @@
+#!/bin/sh
+
+remaps & # Keymapping
+statusbar & # Statusbar script
+mpd & # Music Player Daemon
+dunst & # Simple notification daemon
+unclutter & # Remove mouse pointer when not moved
+sxhkd & # Manage keyboard shortcuts
+exec dwm
