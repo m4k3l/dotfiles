@@ -1,0 +1,63 @@
+# scripts and other commands
+Print
+	maim $HOME/pix/screenshots/$(date +%y%m%d-%H%m-%S).jpg
+super + BackSpace
+	sysact
+super + shift + n
+	notify-send "mpc" "$(mpc current)"
+super + b
+	add-bookmark
+super + Insert
+	xdotool type $(grep -v '^#' ~/.local/share/bookmarks | dmenu -i -l 50 | cut -d' ' -f1)
+super + shift + BackSpace
+	dmenupass --copy
+
+# Run programs
+super + w
+	$BROWSER
+super + v
+	$TERMINAL $EDITOR
+super + e
+	$TERMINAL neomutt
+super + y
+	$TERMINAL ytfzf -t
+super + n
+	$TERMINAL ncmpcpp
+super + r
+	$TERMINAL ranger
+
+# mpc and pulseaudio
+super + p
+	mpc toggle
+super + shift + m
+	pamixer -t
+super + equal
+	pamixer -i 5
+super + minus
+	pamixer -d 5
+super + shift + equal
+	pamixer -i 10
+super + shift + minus
+	pamixer -d 10
+super + comma
+	mpc seek -10
+super + period
+	mpc seek +10
+super + shift + comma
+	mpc prev
+super + shift + period
+	mpc next
+
+# F keys
+super + F1
+	dmenuunicode
+super + F2
+	$TERMINAL pulsemixer
+super + F3
+	mpv --untimed --no-cache --no-osc --no-input-default-bindings --profile=low-latency --input-conf=/dev/null --title=webcam $(ls /dev/video[0,2,4,6,8] | tail -n 1)
+super + F4
+	$TERMINAL nmtui
+super + F5
+	backlight_control +10
+super + F6
+	backlight_control -10

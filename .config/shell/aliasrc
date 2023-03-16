@@ -15,8 +15,6 @@ alias \
 	ls="ls -lhN --color=auto --group-directories-first" \
 	mount="sudo mount" \
 	umount="sudo umount" \
-	pls="sudo" \
-	pup="sudo pacman -Syu --ignore qbittorrent"
 
 # Add options to commands that are always used
 alias \
