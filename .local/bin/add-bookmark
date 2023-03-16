@@ -1,0 +1,13 @@
+#/bin/sh
+
+selection="$(xclip -selection clipboard -o)"
+file="$XDG_DATA_HOME/bookmarks"
+
+[ -f "$file" ] || touch "$file"
+
+if grep -q "$selection" "$file"; then
+    notify-send "Bookmark already exists"
+else
+    echo "$selection" >> "$file"
+    notify-send "Bookmark added"
+fi

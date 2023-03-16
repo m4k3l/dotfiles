@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Simple dwm statusbar script
+
+while(true); do
+    xsetroot -name "(╯°□°）╯︵ ┻━┻) |VOL:$(pamixer --get-volume-human)|BAT:$(cat /sys/class/power_supply/BAT0/capacity)|$(date +"%d.%m.%y %R")"
+  sleep 2
+done

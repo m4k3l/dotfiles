@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Simple script to set a wallpaper using xwallpaper
+# If given an image file as argument, the file will be set as new wallpaper
+# If not given an argument it will restore the last wallpaper
+
+bg_link="$HOME/pix/wall/bg"
+
+if [ ! -z "$1" ]; then
+    ln -sf "$(realpath "$1")" "$bg_link" && xwallpaper --zoom "$bg_link"
+else
+    xwallpaper --zoom "$bg_link"
+fi
