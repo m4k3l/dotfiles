@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Shortcuts for directories
+alias cf="$XDG_CONFIG_HOME" \
+    bi="$HOME/.local/bin" \
+    pw="$XDG_DATA_HOME/password-store" \
+    src="$HOME/.local/src" \
