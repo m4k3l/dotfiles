@@ -20,7 +20,7 @@ super + v
 super + e
 	$TERMINAL neomutt
 super + shift + e
-	$TERMINAL dmenuunicode
+	dmenuunicode
 super + y
 	$TERMINAL ytfzf -t
 super + n
