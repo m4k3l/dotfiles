@@ -2,7 +2,20 @@
 
 # Simple dwm statusbar script
 
+volume() {
+    echo "VOL:$(pamixer --get-volume-human)"
+}
+battery() {
+    echo "BAT:$(cat /sys/class/power_supply/BAT0/capacity)"
+}
+datetime() {
+    date +"%d.%m.%y %R"
+}
+mail() {
+    unread="$(find "${XDG_DATA_HOME:-$HOME/.local/share}"/mail/*/[Ii][Nn][Bb][Oo][Xx]/new/* -type f | wc -l 2>/dev/null)"
+    echo "MAIL:$unread"
+}
 while(true); do
-    xsetroot -name "(╯°□°）╯︵ ┻━┻) |VOL:$(pamixer --get-volume-human)|BAT:$(cat /sys/class/power_supply/BAT0/capacity)|$(date +"%d.%m.%y %R")"
-  sleep 2
+    xsetroot -name "|$(volume)|$(battery)|$(mail)|$(datetime)|"
+    sleep 2
 done

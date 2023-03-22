@@ -5,7 +5,7 @@ case "$(readlink -f /sbin/init)" in
 	*) ctl='loginctl' ;;
 esac
 
-case "$(printf "lock\nleave dwm\nreboot\nshutdown\ndisplay\nnetwork" | dmenu -i)" in
+case "$(printf "lock\nleave dwm\nreboot\nshutdown\ndisplay\nnetwork" | dmenu -i -l 10)" in
 	'lock') slock ;;
 	'leave dwm') kill -TERM "$(pgrep -u "$USER" "\bdwm$")" ;;
 	'reboot') $ctl reboot -i ;;
