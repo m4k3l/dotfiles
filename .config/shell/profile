@@ -18,7 +18,6 @@ export NOTMUCH_CONFIG="$XDG_CONFIG_HOME/notmuch-config"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc-2.0"
 export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
-export GNUPGHOME="${XDG_DATA_HOME:-$HOME/.local/share}/gnupg"
 export WINEPREFIX="${XDG_DATA_HOME:-$HOME/.local/share}/wineprefixes/default"
 export KODI_DATA="${XDG_DATA_HOME:-$HOME/.local/share}/kodi"
 export PASSWORD_STORE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/password-store"
@@ -35,12 +34,11 @@ export GRADLE_USER_HOME="$XDG_CONFIG_HOME/gradle"
 export GIT_CONFIG_GLOBAL="$XDG_CONFIG_HOME/git/gitconfig"
 export _JAVA_AWT_WM_NONREPARENTING=1
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
-export VIMRUNTIME="/usr/share/nvim/runtime"
 export ANDROID_HOME="$XDG_DATA_HOME"/android
 export MPLAYER_HOME="$XDG_CONFIG_HOME"/mplayer
 export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages
 
 # Set default programs
 export TERMINAL="st"
-export EDITOR="nvim"
+export EDITOR="vim"
 export BROWSER="firefox"

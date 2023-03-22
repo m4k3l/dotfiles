@@ -1,5 +1,7 @@
 #!/bin/sh
 
+setbg & # Wallpaper script
+xcompmgr & # Composite Manager
 remaps & # Keymapping
 statusbar & # Statusbar script
 mpd & # Music Player Daemon
