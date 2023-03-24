@@ -37,8 +37,11 @@ export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 export ANDROID_HOME="$XDG_DATA_HOME"/android
 export MPLAYER_HOME="$XDG_CONFIG_HOME"/mplayer
 export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages
+export VIMRUNTIME="/usr/share/nvim/runtime"
 
 # Set default programs
 export TERMINAL="st"
-export EDITOR="vim"
+export EDITOR="nvim"
 export BROWSER="firefox"
+
+source ~/.profile_mycroft
