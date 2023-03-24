@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+source "${ZDOTDIR}/dracula-tty.sh"
+
 # Prompt
 autoload -U colors && colors
 PS1="%B%F{green}%n@%M %F{blue}%1~%F{white}%b %# "
@@ -55,4 +57,5 @@ autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
 # This line is for syntax highlighting, it should be at the end
+source "${ZDOTDIR}/zsh-syntax-highlighting.sh"
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null

@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Source Xresources
+[[ -f ~/.config/x11/Xresources ]] && xrdb -merge -I$HOME ~/.config/x11/Xresources
+
 setbg & # Wallpaper script
 xcompmgr & # Composite Manager
 remaps & # Keymapping
