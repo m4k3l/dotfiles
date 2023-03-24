@@ -1,64 +1,46 @@
-" -=[PLUGINS]=-
+let mapleader =" "
+let g:user_emmet_leader_key='<C-Z>'
 
-" Install vim-plug if it does not exist
-let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
-if empty(glob(data_dir . '/autoload/plug.vim'))
-      silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-        autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+if ! filereadable(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/plug.vim"'))
+    echo "Downloading junegunn/vim-plug to manage plugins..."
+    silent !mkdir -p ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/
+    silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" > ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/plug.vim
+    autocmd VimEnter * PlugInstall
 endif
 
-call plug#begin('~/.vim/plugged')
-     Plug 'preservim/nerdtree'
-     Plug 'vimwiki/vimwiki'
-     Plug 'mattn/emmet-vim'
-     Plug 'vim-airline/vim-airline'
-     Plug 'airblade/vim-gitgutter'
-     Plug 'tpope/vim-commentary'
-     Plug 'ap/vim-css-color'
+call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"'))
+Plug 'preservim/nerdtree'
+Plug 'vimwiki/vimwiki'
+Plug 'mattn/emmet-vim'
+Plug 'vim-airline/vim-airline'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-commentary'
+Plug 'ap/vim-css-color'
+Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 
-" -=[GENERAL]=-
-
-let mapleader=" "
+colorscheme elflord
+set mouse=a
+set nohlsearch
 set clipboard+=unnamedplus
+set number relativenumber
+set shiftwidth=4
+
+syntax on
+filetype plugin on
+highlight ColorColumn ctermbg=238
 set splitbelow splitright
 
-" Disable vi compatibility
-set nocompatible
-
-" Filetype options
-filetype on
-filetype plugin on
-filetype indent on
-
-" UI settings
-syntax on
-set number relativenumber
-set cursorline
-colorscheme lunaperche
-set termguicolors
-set background=dark
-
-" Toggle colorcolumn
+" Toggle Color Column
 nnoremap <leader>z :execute "set colorcolumn=" . (&colorcolumn == "" ? "80" : "")<CR>
-
-" Format settings
-set shiftwidth=4
-set tabstop=4
-set expandtab
-set incsearch
-set ignorecase
-set smartcase
-set showmatch
 
 " Disables automatic commenting on newline:
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-" Wildmenu
-set wildmenu
-set wildmode=list:longest
+" Spell-check set to <leader>o, 'o' for 'orthography':
+map <leader>o :setlocal spell! spelllang=de_de<CR>
 
-" NERDTree
+" Nerd tree
 map <leader>q :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 if has('nvim')
@@ -67,7 +49,7 @@ else
     let NERDTreeBookmarksFile = '~/.vim' . '/NERDTreeBookmarks'
 endif
 
-" Shortcutting split navigation
+" Shortcutting split navigation, saving a keypress:
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
