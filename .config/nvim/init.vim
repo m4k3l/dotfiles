@@ -19,7 +19,8 @@ Plug 'ap/vim-css-color'
 Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 
-colorscheme elflord
+colorscheme dracula
+set termguicolors
 set mouse=a
 set nohlsearch
 set clipboard+=unnamedplus
