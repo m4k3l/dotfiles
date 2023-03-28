@@ -7,14 +7,16 @@ super + shift + n
 	notify-send "mpc" "$(mpc current)"
 super + b
 	add-bookmark
-super + Insert
+super + i
 	xdotool type $(grep -v '^#' ~/.local/share/bookmarks | dmenu -i -l 50 | cut -d' ' -f1)
-super + shift + BackSpace
+super + shift + i
 	dmenupass --copy
 
 # Run programs
 super + w
 	$BROWSER
+super + shift + w
+	firefox
 super + v
 	$TERMINAL $EDITOR
 super + e
@@ -29,6 +31,8 @@ super + shift + n
 	$TERMINAL nmtui
 super + r
 	$TERMINAL ranger
+super + t
+	torbrowser-launcher
 
 # mpc and pulseaudio
 super + p

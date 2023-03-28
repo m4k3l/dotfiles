@@ -1,6 +1,7 @@
 https://www.parabola.nu/feeds/news/
+https://www.archlinux.org/feeds/news/
 http://suckless.org/atom.xml
-https://www.netzpolitik.org/rss "Netzpolitik"
+https://www.netzpolitik.org/rss
 https://www.eff.org/rss/updates.xml
 https://craphound.com/feed
 https://blog.fefe.de/rss.xml
@@ -12,6 +13,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UC42VsoDtra5hMiXZSsD6eGg "Mo
 https://www.youtube.com/feeds/videos.xml?channel_id=UCjr2bPAyPV7t35MvcgT3W8Q "The Hated One"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC2IYWWifoIht9T47z1Z5lJw "Dead Meat"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCdoPCztTOW7BJUPk2h5ttXA "Call me Kevin"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCjSEJkpGbcZhvo0lr-44X_w "TechHut"
 https://odysee.com/$/rss/@DistroTube:2
 https://videos.lukesmith.xyz/feeds/videos.xml?sort=-publishedAt&isLocal=true
 https://git.suckless.org/dwm/atom.xml
