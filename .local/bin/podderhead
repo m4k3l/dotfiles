@@ -14,6 +14,7 @@ fetch() {
 	while read -r link; do
 		filename="$(basename "$link")"
 		wget -nc -O "$filename" "$link"
+		notify-send "New Episode: $filename"
 	done < "$podcast_dir/tmp"
 	rm "$podcast_dir/tmp"
 }

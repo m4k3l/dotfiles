@@ -2,6 +2,9 @@
 
 # Simple dwm statusbar script
 
+up() {
+    uptime -p
+}
 volume() {
     echo "VOL:$(pamixer --get-volume-human)"
 }
@@ -16,6 +19,6 @@ mail() {
     echo "MAIL:$unread"
 }
 while(true); do
-    xsetroot -name "|$(volume)|$(battery)|$(mail)|$(datetime)|"
+    xsetroot -name "$(up)|$(volume)|$(battery)|$(mail)|$(datetime)|"
     sleep 2
 done
