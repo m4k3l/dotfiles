@@ -13,8 +13,7 @@ fetch() {
 	wget -q -O - $1 | sed -n 's/.*enclosure.*url="\(.*.mp3\).*/\1/p' > "$podcast_dir/tmp"
 	while read -r link; do
 		filename="$(basename "$link")"
-		wget -nc -O "$filename" "$link"
-		notify-send "New Episode: $filename"
+		wget -nc -O "$filename" "$link" && notify-send "New Episode: $filename"
 	done < "$podcast_dir/tmp"
 	rm "$podcast_dir/tmp"
 }
