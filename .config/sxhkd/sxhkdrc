@@ -31,7 +31,7 @@ super + shift + n
 	$TERMINAL nmtui
 super + r
 	$TERMINAL ranger
-super + t
+super + shift + t
 	torbrowser-launcher
 
 # mpc and pulseaudio
