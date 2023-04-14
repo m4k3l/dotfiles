@@ -17,11 +17,7 @@ battery() {
 datetime() {
     date +"%d.%m.%y %R"
 }
-mail() {
-    unread="$(find "${XDG_DATA_HOME:-$HOME/.local/share}"/mail/*/[Ii][Nn][Bb][Oo][Xx]/new/* -type f | wc -l 2>/dev/null)"
-    echo "MAIL:$unread"
-}
 while(true); do
-    xsetroot -name "$(disk_space)|$(volume)|$(battery)|$(mail)|$(datetime)|"
+    xsetroot -name "$(disk_space)|$(volume)|$(battery)|$(datetime)|"
     sleep 2
 done

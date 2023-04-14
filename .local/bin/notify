@@ -1,0 +1,9 @@
+#!/bin/sh
+
+read -p "Empfänger: " recipient
+read -p "Nachricht: " message
+
+gennote -r "$recipient" -m "$message"
+pandoc -o ~/mitteilung.pdf  ~/mitteilung.md
+lp ~/mitteilung.pdf
+rm ~/mitteilung*
