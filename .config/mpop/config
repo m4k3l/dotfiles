@@ -1,0 +1,22 @@
+defaults
+tls on
+
+account markus
+host mail.hanetzok.net
+user markus
+passwordeval "pass show hanetzok.net/markus"
+delivery maildir ~/mail/markus/INBOX
+
+account code
+host mail.hanetzok.net
+user code
+passwordeval "pass show hanetzok.net/code"
+delivery maildir ~/mail/code/INBOX
+
+account shopping
+host mail.hanetzok.net
+user shopping
+passwordeval "pass show hanetzok.net/shopping"
+delivery maildir ~/mail/shopping/INBOX
+
+account default : markus
