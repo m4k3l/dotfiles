@@ -45,17 +45,16 @@ super + shift + comma
 	mpc prev
 super + shift + period
 	mpc next
+super + m
+	pamixer --toggle-mute
+super + =
+	pamixer -i 5
+super + +
+	pamixser -i 10
 
 # F keys
 super + F1
-	pamixer -t
-super + F2
-	pamixer -d 5
-super + F3
-	pamixer -i 5
-super + F5
-	backlight_control -10
-super + F6
-	backlight_control +10
-super + F7
 	mpv --untimed --no-cache --no-osc --no-input-default-bindings --profile=low-latency --input-conf=/dev/null --title=webcam $(ls /dev/video[0,2,4,6,8] | tail -n 1)
+
+super + F2
+	pulsemixer
