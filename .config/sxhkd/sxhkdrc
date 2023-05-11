@@ -29,8 +29,6 @@ super + n
 	$TERMINAL ncmpcpp
 super + shift + n
 	$TERMINAL nmtui
-super + r
-	$TERMINAL ranger
 super + shift + t
 	torbrowser-launcher
 
