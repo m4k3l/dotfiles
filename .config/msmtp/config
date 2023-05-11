@@ -9,6 +9,7 @@ tls on
 tls_trust_file	/etc/ssl/certs/ca-certificates.crt
 logfile /home/markus/.cache/msmtp/msmtp.log
 tls_starttls off
+
 account shopping@hanetzok.net
 host mail.hanetzok.net
 port 465
@@ -20,6 +21,7 @@ tls on
 tls_trust_file	/etc/ssl/certs/ca-certificates.crt
 logfile /home/markus/.cache/msmtp/msmtp.log
 tls_starttls off
+
 account code@hanetzok.net
 host mail.hanetzok.net
 port 465
@@ -29,5 +31,5 @@ passwordeval "pass hanetzok.net/code"
 auth on
 tls on
 tls_trust_file	/etc/ssl/certs/ca-certificates.crt
-logfile /home/markus/.cache/msmtp/msmtp.log
+logfile /home/markus/.local/state/msmtp/msmtp.log
 tls_starttls off
