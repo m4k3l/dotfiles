@@ -6,7 +6,7 @@
 setbg & # Wallpaper script
 xcompmgr & # Composite Manager
 remaps & # Keymapping
-statusbar & # Statusbar script
+slstatus & # statusbar tool
 mpd & # Music Player Daemon
 dunst & # Simple notification daemon
 unclutter & # Remove mouse pointer when not moved
