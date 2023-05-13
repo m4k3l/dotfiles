@@ -3,9 +3,7 @@ Print
 	maim $HOME/pix/screenshots/$(date +%y%m%d-%H%m-%S).jpg
 super + BackSpace
 	sysact
-super + shift + n
-	notify-send "mpc" "$(mpc current)"
-super + b
+super + shift + b
 	add-bookmark
 super + i
 	xdotool type $(grep -v '^#' ~/.local/share/bookmarks | dmenu -i -l 50 | cut -d' ' -f1)
@@ -25,12 +23,6 @@ super + shift + e
 	dmenuunicode
 super + y
 	$TERMINAL ytfzf -t
-super + n
-	$TERMINAL ncmpcpp
-super + shift + n
-	$TERMINAL nmtui
-super + shift + t
-	torbrowser-launcher
 
 # mpc and pulseaudio
 super + p
@@ -43,7 +35,7 @@ super + shift + comma
 	mpc prev
 super + shift + period
 	mpc next
-super + m
+super + shift +  m
 	pamixer --toggle-mute
 super + equal
 	pamixer -i 5
