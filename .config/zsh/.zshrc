@@ -56,6 +56,8 @@ preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
+source <(ng completion script)
+
 # This line is for syntax highlighting, it should be at the end
 source "${ZDOTDIR}/zsh-syntax-highlighting.sh"
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
