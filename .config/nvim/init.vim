@@ -17,10 +17,11 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
 Plug 'ap/vim-css-color'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 call plug#end()
 
-colorscheme dracula
-set termguicolors
+colorscheme tokyonight
+set tw=80
 set mouse=a
 set nohlsearch
 set clipboard+=unnamedplus
