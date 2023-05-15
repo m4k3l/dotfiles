@@ -6,8 +6,14 @@
 
 bg_link="$XDG_DATA_HOME/bg/bg"
 
+case "$2" in
+    "-c") option="--center";;
+    *) option="--zoom";;
+esac
+
+
 if [ ! -z "$1" ]; then
-    ln -sf "$(realpath "$1")" "$bg_link" && xwallpaper --zoom "$bg_link"
+    ln -sf "$(realpath "$1")" "$bg_link" && xwallpaper "$option" "$bg_link"
 else
     xwallpaper --zoom "$bg_link"
 fi
