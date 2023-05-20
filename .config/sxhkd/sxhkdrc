@@ -1,6 +1,6 @@
 # scripts and other commands
-Print
-	maim $HOME/pix/screenshots/$(date +%y%m%d-%H%m-%S).jpg
+super + c
+	maim -f png $HOME/bilder/screenshots/$(date +%y%m%d-%H%m-%S).png
 super + BackSpace
 	sysact
 super + shift + b
