@@ -1,0 +1,55 @@
+set NERDTree
+
+set ideajoin
+set idearefactormode=keep
+
+set clipboard+=unnamed
+set clipboard+=ideaput
+set number relativenumber
+
+let mapleader=" "
+
+sethandler <C-v> i:ide
+sethandler <C-r> i:ide
+sethandler <C-x> i:ide
+
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gs :action GotoSuperMethod<CR>
+nnoremap gc :action GotoClass<CR>
+nnoremap gu :action FindUsages<CR>
+nnoremap gl :action JumpToLastChange<CR>
+nnoremap ge :action GotoNextError<CR>
+
+nnoremap == :action ReformatCode<CR>
+nnoremap <C-g> :action Generate<CR>
+
+nnoremap gcc :action CommentByLineComment<CR>
+nnoremap gbb :action CommentByBlockComment<CR>
+
+nnoremap <C-z> :action ToogleZenMode<CR>
+nnoremap <leader>q :NERDTreeToggle<CR>
+
+nnoremap <C-\> :action SplitVertically<CR>
+nnoremap <C--> :action SplitHorizontally<CR>
+nnoremap <C-=> :action Unsplit<CR>
+nnoremap <C-m> :action MoveEditorToOppositeTabGroup<CR>
+
+nnoremap <Tab> :action PreviousTab<CR>
+nnoremap <S-Tab> :action NextTab<CR>
+nnoremap <C-x> :action CloseContent<CR>
+nnoremap <C-q> :action CloseActiveTab<CR>
+nnoremap <leader>qq :action CloseAllEditors<CR>
+nnoremap <leader>jj :action QuickJavaDoc<CR>
+
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+nnoremap [[ :action MethodUp<CR>
+nnoremap ]] :action MethodDown<CR>
+
+nnoremap <leader>rr :action Run<CR>
+nnoremap <leader>rc :action ChooseRunConfiguration<CR>
+nnoremap <leader>rd :action Debug<CR>

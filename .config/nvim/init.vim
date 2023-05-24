@@ -80,6 +80,12 @@ autocmd BufWritePre * %s/\n\+\%$//e
 autocmd BufWritePre *.[ch] %s/\%$/\r/e
 autocmd BufWritePre * cal cursor(currPos[1], currPos[2])
 
+" Tabbing
+map <Tab> :-tabnext<CR>
+map <S-Tab> :+tabnext<CR>
+map <C-x> :tabclose<CR>
+map <C-t> :tabnew<CR>
+
 " Turns off highlighting on the bits of code that are changed, so the line that is changed is highlighted but the actual text that has changed stands out on the line and is readable.
 if &diff
     highlight! link DiffText MatchParen
