@@ -4,7 +4,7 @@ source "${ZDOTDIR}/dracula-tty.sh"
 
 # Prompt
 autoload -U colors && colors
-PS1="%B%F{green}%n@%M %F{blue}%1~%F{white}%b %# "
+PS1="%B%F{green}%n %F{yellow}%3~%F{white}%b %# "
 
 # Automatically cd into typed directory.
 setopt autocd

@@ -21,8 +21,12 @@ set pgp_self_encrypt = yes
 set pgp_default_key  = 'markus@hanetzok.net'
 
 macro index o "<shell-escape>mpop markus<enter>" "sync markus@hanetzok.net"
-mailboxes "=PVG" "=Trash" "=Sent" "=Junk" "=Drafts" "=INBOX"
+mailboxes "=behoerden" "=PVG" "=Trash" "=Sent" "=Junk" "=Drafts" "=INBOX"
 
 macro index,pager gp "<change-folder>=PVG<enter>" "go to PVG"
 macro index,pager Mp ";<save-message>=PVG<enter>" "move mail to PVG"
 macro index,pager Cp ";<copy-message>=PVG<enter>" "copy mail to PVG"
+
+macro index,pager gb "<change-folder>=behoerden<enter>" "go to behoerden"
+macro index,pager Mb ";<save-message>=behoerden<enter>" "move mail to behoerden"
+macro index,pager Cb ";<copy-message>=behoerden<enter>" "copy mail to behoerden"

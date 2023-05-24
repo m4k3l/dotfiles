@@ -20,7 +20,8 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 call plug#end()
 
-colorscheme tokyonight
+colorscheme cyberpunk-neon
+set termguicolors
 set tw=80
 set mouse=a
 set nohlsearch

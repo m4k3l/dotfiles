@@ -78,6 +78,10 @@ color hdrdefault    brightcolor222  color235
 color header        brightcolor39   color235        "^(From|To|Cc|Bcc)"
 color header        brightcolor165  color235        "^(Subject|Date)"
 
+# side bar -------------------------------------------------------------
+color sidebar_indicator cyan black
+
+
 # body -----------------------------------------------------------------
 
 color quoted        color39         color235

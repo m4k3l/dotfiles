@@ -3,7 +3,7 @@ auto-reload yes
 
 external-url-viewer "urlscan -dc -r 'linkhandler {}'"
 
-include "/home/markus/.config/newsboat/dracula"
+include "/home/markus/.config/newsboat/cyberpunk-neon"
 
 bind-key j down
 bind-key k up
