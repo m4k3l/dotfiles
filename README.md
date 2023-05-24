@@ -19,7 +19,7 @@ Among other things, this repo contains configs for:
 
 ## Scripts
 
-Scripts are found in [.local/bin](.local/bin). This collection consists of scripts that I have written myself,
+Scripts are found in ``.local/bin``. This collection consists of scripts that I have written myself,
 as well as scripts that I copied from other people.
 
 ## Usage
